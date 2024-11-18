@@ -52,33 +52,7 @@
       "status": "Upcoming",
       "contactInfo": "+8801112345678",
       "division": "Chattogram"
-    },
-    {
-      "id": 7,
-      "title": "Winter Relief for Urban Poor in Sylhet City",
-      "image": "https://example.com/images/sylhet-campaign3.jpg",
-      "description": "Assist urban poor in Sylhet City with warm clothing donations.",
-      "status": "Ongoing",
-      "contactInfo": "+8801812345690",
-      "division": "Sylhet"
-    },
-    {
-      "id": 8,
-      "title": "Dhaka Peri-Urban Winter Assistance",
-      "image": "https://example.com/images/dhaka-campaign3.jpg",
-      "description": "Target peri-urban areas in Dhaka to distribute winter essentials to struggling families.",
-      "status": "Upcoming",
-      "contactInfo": "+8801912345690",
-      "division": "Dhaka"
-    },
-    {
-      "id": 9,
-      "title": "Chattogram Hill Tracts Winter Drive",
-      "image": "https://example.com/images/chattogram-campaign3.jpg",
-      "description": "Deliver warm clothing to communities in the Chattogram Hill Tracts.",
-      "status": "Ongoing",
-      "contactInfo": "+8801712345690",
-      "division": "Chattogram"
     }
+    
   ]
   

@@ -1,4 +1,5 @@
 import About from "../components/About";
+import HowWorks from "../components/HowWorks";
 import Slider from "../components/Slider";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
         <div>
            <Slider></Slider>
            <About></About>
+           <HowWorks></HowWorks>
         </div>
     );
 };
