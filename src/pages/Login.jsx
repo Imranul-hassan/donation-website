@@ -5,6 +5,9 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 const Login = () => {
     const {handleGoogleLogin, handleLogin, handleLogOut} = useContext(authContext);
     const [error , setError] = useState("")
+    const location = useLocation()
+    const navigate = useNavigate()
+
     const handleSubmit =(e)=>{
         e.preventDefault();
         const form = e.target;
@@ -12,15 +15,24 @@ const Login = () => {
         const password = form.password.value   
         
         handleLogin(email, password)
-        .then(res =>{})
+        .then(res =>{
+            navigate(location.state.from)
+        })
         .catch(err=>{
             setError(err.message)
         })
     }
+    const googleLoginHandler=()=>{
+        handleGoogleLogin()
+        .then(res=>{
+            navigate(location.state.from)
+        })
+
+    }
 
     return (
         <div>
-            {/* <button onClick={handleGoogleLogin}>Google Login</button> */}
+            <button onClick={googleLoginHandler}>Google Login</button>
             <div className="min-h-screen  flex justify-center items-center">
                 <div className="card bg-base-100 w-full max-w-sm shrink-0">
                 <h2 className=" font-semibold text-2xl text-center mt-2">Login your account</h2>

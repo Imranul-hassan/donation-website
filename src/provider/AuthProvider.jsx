@@ -17,15 +17,15 @@ const AuthProvider = ({route}) => {
        return signInWithEmailAndPassword(auth, email,password)
     }
     const handleGoogleLogin=()=>{
-        signInWithPopup(auth, googleProvider)
-        .then((result)=>{
-            console.log(result)
-            setUser(result.user)
-        })
-        .catch((error)=>{
-            console.log(error)
-            setUser(null)
-        })
+       return signInWithPopup(auth, googleProvider)
+        // .then((result)=>{
+        //     console.log(result)
+        //     setUser(result.user)
+        // })
+        // .catch((error)=>{
+        //     console.log(error)
+        //     setUser(null)
+        // })
     }
     const manageProfile = (name, image)=>{
        return  updateProfile(auth.currentUser,{
