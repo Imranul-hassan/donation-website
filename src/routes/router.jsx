@@ -5,6 +5,9 @@ import Help from "../pages/Help";
 import Dashboard from "../pages/Dashboard";
 import Home from "../pages/Home";
 import DonationDetails from "../components/DonationDetails";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -19,7 +22,7 @@ const router = createBrowserRouter([
             {
                 path:"/campaign",
                 element:<DonationCampaigns></DonationCampaigns>,
-                loader:()=>fetch("/public/campaigns.json")
+                loader:()=>fetch("/campaigns.json")
             },
             {
                 path:"/help",
@@ -31,14 +34,24 @@ const router = createBrowserRouter([
             },
             {
                 path:"/details/:id",
-                element: <DonationDetails></DonationDetails>,
+                element: <PrivateRoute>
+                    <DonationDetails></DonationDetails>
+                </PrivateRoute>,
                 loader:async({params})=>{
-                    const res = await fetch("/public/campaigns.json")
+                    const res = await fetch("/campaigns.json")
                     const data = await res.json()
                     const singleData = data.find(d=> d.id == params.id)
                     console.log(singleData)
                     return singleData
                 }
+            },
+            {
+                path:"/login",
+                element:<Login></Login>
+            },
+            {
+                path:"/register",
+                element:<Register></Register>
             }
         ]
     },
