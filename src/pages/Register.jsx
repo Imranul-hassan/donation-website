@@ -1,10 +1,11 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { authContext } from "../provider/AuthProvider";
 
 const Register = () => {
-    const {handleRegister, manageProfile} = useContext(authContext);
+    const {handleRegister, manageProfile, handleGoogleLogin} = useContext(authContext);
     const [error, setError] = useState("")
+    const navigate = useNavigate()
     const handleSubmit = (e)=>{
         e.preventDefault();
         setError("")
@@ -30,8 +31,17 @@ const Register = () => {
         handleRegister(email, password)
         .then(res =>{
             manageProfile(name, photo)
+            navigate("/")
         })
      
+    }
+    const googleHandler=()=>{
+        handleGoogleLogin()
+        .then(res=>{
+            // 
+            navigate("/")
+        })
+
     }
     return (
         <div>
@@ -67,6 +77,7 @@ const Register = () => {
                 <div className="form-control mt-6">
                 <button type="submit" className="btn btn-primary">Register</button>
                 </div>
+                <button onClick={googleHandler}>Google Login</button>
                 {error && <p className="text-red-500">{error} </p>}
             </form>
             

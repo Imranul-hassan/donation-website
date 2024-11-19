@@ -6,6 +6,7 @@ import Dashboard from "../pages/Dashboard";
 import Home from "../pages/Home";
 import DonationDetails from "../components/DonationDetails";
 import Login from "../pages/Login";
+import Error from "../pages/Error";
 import Register from "../pages/Register";
 import PrivateRoute from "./PrivateRoute";
 
@@ -30,7 +31,9 @@ const router = createBrowserRouter([
             },
             {
                 path:"/dashboard",
-                element:<Dashboard></Dashboard>
+                element:<PrivateRoute>
+                    <Dashboard></Dashboard>
+                </PrivateRoute>
             },
             {
                 path:"/details/:id",
@@ -56,12 +59,8 @@ const router = createBrowserRouter([
         ]
     },
     {
-        path:"/auth",
-        element:<h1>auth</h1>
-    },
-    {
         path:"*",
-        element: <h2>Error</h2>
+        element:<Error></Error>
     }
 
 ])

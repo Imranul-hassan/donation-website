@@ -2,3 +2,5 @@
 .active {
     color: red;
   }
+
+  @import "aos/dist/aos.css";
