@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const DonationDetails = () => {
@@ -9,6 +10,7 @@ const DonationDetails = () => {
         e.preventDefault();
         const form = e.target 
         form.reset();
+        toast.success(" Thank you ! We will reach your destination soon");
     }
 
     return (
@@ -18,7 +20,7 @@ const DonationDetails = () => {
                     <img
                     className="w-full h-52 p-3 rounded-md"
                     src={image}
-                    alt="Shoes"/>
+                    alt=" "/>
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">{title}</h2>
@@ -70,7 +72,7 @@ const DonationDetails = () => {
                     placeholder="Optional"
                     />
                 </div>
-                <button type="submit" className="bg-[#457B9D] text-white py-2 px-4 rounded-lg font-bold">
+                <button  type="submit" className="bg-[#457B9D] text-white py-2 px-4 rounded-lg font-bold">
                     Submit Donation
                 </button>
                 </form>

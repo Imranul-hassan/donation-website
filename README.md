@@ -12,7 +12,7 @@ This web application is designed to facilitate the donation of winter clothing t
 
 1. **Single-Page Layout**: Smooth navigation with a single-page design, eliminating page reloads.
 
-2. **User Authentication**: Users can log in/register with email/password or Google. Includes "Forgot Password" for recovery.
+2. **User Authentication**: Users can log in/register with email/password or Google. 
 
 3. **Donation Campaigns**: Browse ongoing campaigns and navigate to donation details to contribute.
 
