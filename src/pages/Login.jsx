@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { authContext } from "../provider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
+
 const Login = () => {
     const {handleGoogleLogin, handleLogin, handleLogOut} = useContext(authContext);
     const [error , setError] = useState("")
@@ -37,7 +38,7 @@ const Login = () => {
             <div className="min-h-screen  flex justify-center items-center">
                 <div className="card bg-base-100 w-full max-w-sm shrink-0">
                 <h2 className=" font-semibold text-2xl text-center mt-2">Login your account</h2>
-                <form onSubmit={handleSubmit}  className="card-body pt-3">
+                <form onSubmit={handleSubmit}  className="card-body pt-3 ">
                     <div className="form-control">
                     <label className="label">
                         <span className="label-text">Email</span>

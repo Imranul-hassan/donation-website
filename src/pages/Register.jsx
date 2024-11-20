@@ -1,11 +1,14 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { authContext } from "../provider/AuthProvider";
+import { IoMdEye } from "react-icons/io";
+import { IoMdEyeOff } from "react-icons/io";
 
 const Register = () => {
     const {handleRegister, manageProfile, handleGoogleLogin} = useContext(authContext);
-    const [error, setError] = useState("")
+    const [error, setError] = useState("");
     const navigate = useNavigate()
+    const [showPassword, setShowPassword] = useState(false);
     const handleSubmit = (e)=>{
         e.preventDefault();
         setError("")
@@ -45,10 +48,10 @@ const Register = () => {
     }
     return (
         <div>
-           <div className="min-h-screen  flex justify-center items-center">
+           <div className=" flex justify-center items-center my-10">
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
             <h2 className=" font-semibold text-2xl text-center mt-2">Register your account</h2>
-            <form onSubmit={handleSubmit} className="card-body">
+            <form onSubmit={handleSubmit} className="card-body relative">
                 <div className="form-control">
                 <label className="label">
                     <span className="label-text">Name</span>
@@ -71,8 +74,13 @@ const Register = () => {
                 <label className="label">
                     <span className="label-text">Password</span>
                 </label>
-                <input name="password" type="password" placeholder="password" className="input input-bordered" required />
-        
+                <input name="password" type={showPassword ? "text" : "password"} placeholder="password" className="input input-bordered" required />
+                <button onClick={()=> setShowPassword(!showPassword)} 
+                    className="absolute right-4 top-[355px] left-80 text-2xl ">
+                        {
+                            showPassword ?  <IoMdEyeOff />  : <IoMdEye />
+                        }
+                </button>
                 </div>
                 <div className="form-control mt-6">
                 <button type="submit" className="btn btn-primary">Register</button>
