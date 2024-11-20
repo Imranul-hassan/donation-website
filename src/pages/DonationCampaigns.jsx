@@ -5,11 +5,15 @@ const DonationCampaigns = () => {
     const campaigns = useLoaderData();
     console.log(campaigns)
     return (
-        <div className="md:grid grid-cols-3 gap-4 my-8">
-            {
-                campaigns.map(campaign => <CampaignCard key={campaign.id} campaign={campaign}></CampaignCard>)
-            }
-        </div>
+        
+      <div>
+            <h3 className="font-bold text-3xl text-center mt-5">Join Our Winter Relief Campaigns</h3>
+            <div className="md:grid grid-cols-3 gap-4 my-8">
+                {
+                    campaigns.map(campaign => <CampaignCard key={campaign.id} campaign={campaign}></CampaignCard>)
+                }
+            </div>
+      </div>
     );
 };
 

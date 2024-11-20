@@ -25,20 +25,20 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              className="menu menu-sm dropdown-content bg-[#1D3557] rounded-box z-[1] mt-3 w-52 p-2 shadow">
               <NavLink to="/">Home</NavLink>
-              <NavLink to="/campaign">Campaign</NavLink>
-              <NavLink to="/help">Help</NavLink>
+              <NavLink to="/campaign">Donation Campaign</NavLink>
+              <NavLink to="/help">Hoe to Help</NavLink>
               <NavLink to="/dashboard">Dashboard</NavLink>
             </ul>
           </div>
           <NavLink to="/" className="btn btn-ghost text-xl pl-0">DONATION</NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 space-x-5 font-semibold text-base">
+          <ul className="menu menu-horizontal px-1 space-x-6 font-semibold text-base">
               <NavLink to="/">Home</NavLink>
-              <NavLink to="/campaign">Campaign</NavLink>
-              <NavLink to="/help">Help</NavLink>
+              <NavLink to="/campaign">Donation Campaign</NavLink>
+              <NavLink to="/help">How to Help</NavLink>
               <NavLink to="/dashboard">Dashboard</NavLink>
           </ul>
         </div>
