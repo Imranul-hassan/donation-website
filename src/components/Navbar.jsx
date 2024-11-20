@@ -6,7 +6,7 @@ const Navbar = () => {
     const {user, handleLogOut} = useContext(authContext)
   
     return (
-      <div className="navbar w-10/12 mx-auto">
+      <div className="navbar w-10/12 mx-auto text-white ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -32,7 +32,7 @@ const Navbar = () => {
               <NavLink to="/dashboard">Dashboard</NavLink>
             </ul>
           </div>
-          <NavLink to="/" className="btn btn-ghost text-xl ">DONATION</NavLink>
+          <NavLink to="/" className="btn btn-ghost text-xl pl-0">DONATION</NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 space-x-5 font-semibold text-base">

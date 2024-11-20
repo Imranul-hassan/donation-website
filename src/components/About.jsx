@@ -5,10 +5,10 @@ import 'animate.css';
 const About = () => {
   
     return (
-        <div className="my-10 md:flex">
+        <div id="about" className="my-10 md:flex bg-[#FFFFFF] p-8 rounded-lg">
                 <div className="md:w-1/2 pr-4 ">
-                    <h3>About Us</h3>
-                    <h1 className="font-semibold text-4xl my-3 ">Spreading Warmth, One Donation at a Time</h1>
+                    <h3 className="font-bold">About Us</h3>
+                    <h1 className="font-semibold text-4xl my-3 text-[#1D3557] ">Spreading Warmth, One Donation at a Time</h1>
                     <p>At Winter Donation, we connect donors and volunteers to provide warmth to those in need across Bangladesh during harsh winters. Together, we can make a difference.</p>
                     <div className="md:flex-col mt-6 animate__animated animate__bounce">
                         <div className="bg-slate-50 shadow-lg p-3">

@@ -1,19 +1,24 @@
 import { useLoaderData } from "react-router-dom";
+import { toast } from "react-toastify";
+
 
 const DonationDetails = () => {
     const singleData = useLoaderData();
     const {title, image, description, division, id} = singleData
     const handleSubmit = (e) => {
         e.preventDefault();
-    };
+        const form = e.target 
+        form.reset();
+    }
+
     return (
-        <div className="mb-10 md:flex gap-3">
-            <div className="card card-compact bg-base-100 h-auto shadow-xl w-1/2">
+        <div className="my-10">
+            <div className="card card-compact bg-base-100 h-auto shadow-xl md:w-1/2 mx-auto">
                 <figure>
                     <img
                     className="w-full h-52 p-3 rounded-md"
                     src={image}
-                    alt="Shoes" />
+                    alt="Shoes"/>
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">{title}</h2>
@@ -23,7 +28,7 @@ const DonationDetails = () => {
                     </div>
                 </div>
             </div>
-            <div className="w-1/2">
+            <div className="md:w-1/2 mx-auto">
             <form onSubmit={handleSubmit} className="space-y-4 mt-6 bg-white rounded-lg p-3 shadow-xl">
                 <div>
                     <label className="block text-sm font-medium">Quantity</label>
@@ -65,7 +70,7 @@ const DonationDetails = () => {
                     placeholder="Optional"
                     />
                 </div>
-                <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded">
+                <button type="submit" className="bg-[#457B9D] text-white py-2 px-4 rounded-lg font-bold">
                     Submit Donation
                 </button>
                 </form>
