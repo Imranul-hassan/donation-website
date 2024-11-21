@@ -46,11 +46,11 @@ const Navbar = () => {
          {
             user?.email ? 
             (<div className="flex gap-2">
-              <img className="w-7 rounded-full" src={user.photoURL}></img>
-              <button className="font-semibold" onClick={handleLogOut}>Logout</button>
+              <img className="w-9 rounded-full" src={user.photoURL}></img>
+              <button className="font-semibold py-2 px-3 bg-[#FFB800] rounded-md" onClick={handleLogOut}>Logout</button>
             </div>) :
             (<NavLink to="/login">
-              <a className="btn font-semibold">Login</a>
+              <a className="py-2 px-3 bg-[#3b6781] rounded-md font-semibold">Login</a>
             </NavLink>)
          }
         </div>

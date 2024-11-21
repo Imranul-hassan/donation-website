@@ -18,14 +18,6 @@ const AuthProvider = ({route}) => {
     }
     const handleGoogleLogin=()=>{
        return signInWithPopup(auth, googleProvider)
-        // .then((result)=>{
-        //     console.log(result)
-        //     setUser(result.user)
-        // })
-        // .catch((error)=>{
-        //     console.log(error)
-        //     setUser(null)
-        // })
     }
     const manageProfile = (name, image)=>{
        return  updateProfile(auth.currentUser,{

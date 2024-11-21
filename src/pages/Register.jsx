@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { authContext } from "../provider/AuthProvider";
 import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
+import logo from "../assets/google.png"
 
 const Register = () => {
     const {handleRegister, manageProfile, handleGoogleLogin} = useContext(authContext);
@@ -83,13 +84,16 @@ const Register = () => {
                 </button>
                 </div>
                 <div className="form-control mt-6">
-                <button type="submit" className="btn btn-primary">Register</button>
+                <button type="submit" className="btn bg-[#3b6781] text-white">Register</button>
                 </div>
-                <button onClick={googleHandler}>Google Login</button>
+                <div className="flex mt-4 border p-2 rounded-md items-center justify-center">
+                        <img className="w-9" src={logo}></img>
+                         <button className=" bg-white" onClick={googleHandler}>Sign up with google</button>
+                </div>
                 {error && <p className="text-red-500">{error} </p>}
             </form>
             
-            <p className="text-center mb-4 font-semibold">Already Have An Account ? <Link to="/login"> Login</Link></p>
+            <p className="text-center mb-6 font-semibold">Already Have An Account ? <Link to="/login"> Login</Link></p>
             </div>
         </div>
         </div>

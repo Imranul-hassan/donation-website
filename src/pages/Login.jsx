@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { authContext } from "../provider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import logo from "../assets/google.png"
 
 
 const Login = () => {
@@ -27,7 +28,6 @@ const Login = () => {
     const googleLoginHandler=()=>{
         handleGoogleLogin()
         .then(res=>{
-            // 
             navigate("/")
         })
 
@@ -35,30 +35,34 @@ const Login = () => {
 
     return (
         <div>
-            <div className="min-h-screen  flex justify-center items-center">
+            <div className="my-10 flex justify-center items-center">
                 <div className="card bg-base-100 w-full max-w-sm shrink-0">
                 <h2 className=" font-semibold text-2xl text-center mt-2">Login your account</h2>
                 <form onSubmit={handleSubmit}  className="card-body pt-3 ">
                     <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Email</span>
+                        <span className="label-text text-base">Email</span>
                     </label>
                     <input name="email" type="email" placeholder="email" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Password</span>
+                        <span className="label-text text-base">Password</span>
                     </label>
                     <input name="password" type="password" placeholder="password" autoComplete="off" className="input input-bordered" required />
+                    <p className="mt-4">Forget Password</p>
                     </div>
-                    <div className="form-control mt-6">
-                         <button type="submit" className="btn btn-primary">Login</button>
+                    <div className="form-control mt-4">
+                         <button type="submit" className="btn bg-[#3b6781] text-white font-bold">Login</button>
                     </div>
-        
-                    <button onClick={googleLoginHandler}>Google Login</button>
+
+                    <div className="flex mt-4 border p-2 rounded-md items-center justify-center">
+                        <img className="w-9" src={logo}></img>
+                         <button className=" bg-white" onClick={googleLoginHandler}>Sign in with google</button>
+                    </div>
                     {error && <p className="text-red-400">{error}</p>}
                 </form>
-                <p className="text-center mb-4 font-semibold">Dont’t Have An Account ? <Link to="/register"> Register</Link></p>
+                <p className="text-center mb-5 font-semibold">Dont’t Have An Account ? <Link to="/register"> Register</Link></p>
                 </div>
             </div>
         </div>
