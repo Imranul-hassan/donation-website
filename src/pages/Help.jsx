@@ -16,7 +16,7 @@ const Help = () => {
                         <p>Contribute winter essentials or spread the word to support our donation drives and make an impact.</p>
                         <Link to="/campaign"><button className="btn font-bold bg-[#3b6781] mt-2 text-white font-base">Campaign Details</button></Link>
                     </div>
-                    <div className="bg-lime-500 p-4 rounded-lg shadow-lg">
+                    <div className="bg-blue-300 p-4 rounded-lg shadow-lg">
                         <h2 className="text-lg font-bold mb-2 text-[#1D3557]">Lend a Hand: Distribute Warmth This Winter</h2>
                         <p>
                         Help collect, sort, and distribute winter clothing to bring warmth to those in need this winter.</p>

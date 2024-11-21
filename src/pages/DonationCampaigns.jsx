@@ -3,7 +3,6 @@ import CampaignCard from "../components/CampaignCard";
 
 const DonationCampaigns = () => {
     const campaigns = useLoaderData();
-    console.log(campaigns)
     return (
         
       <div>

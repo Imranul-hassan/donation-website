@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const Impact = () => {
     return (
         <div>
-            <section className="bg-zinc-100 p-12 mb-10 rounded-lg">
+            <section className="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 p-12 mb-10 rounded-lg">
                 <div className="container mx-auto text-center">
                     <h2 className="text-4xl font-bold mb-6">Our Impact So Far</h2>
                     <p className="text-lg  mb-10">Together, we've brought warmth and hope to thousands of lives.</p>
