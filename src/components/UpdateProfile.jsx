@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getAuth, updateProfile } from 'firebase/auth';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const UpdateProfile = () => {
   const [name, setName] = useState('');
@@ -16,11 +18,11 @@ const UpdateProfile = () => {
         displayName: name,
         photoURL: photoURL,
       });
-      alert('Profile updated successfully!');
+      toast.success('Profile updated successfully!');
       navigate('/dashboard'); 
     } catch (error) {
       console.error('Error updating profile:', error);
-      alert('Failed to update profile.');
+      toast.error('Failed to update profile.');
     }
   };
 

@@ -51,7 +51,7 @@ const Register = () => {
         <div>
            <div className=" flex justify-center items-center my-10">
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-            <h2 className=" font-semibold text-2xl text-center mt-2">Register your account</h2>
+            <h2 className=" font-semibold text-2xl text-center mt-2 ">Register your account</h2>
             <form onSubmit={handleSubmit} className="card-body relative">
                 <div className="form-control">
                 <label className="label">
@@ -77,7 +77,7 @@ const Register = () => {
                 </label>
                 <input name="password" type={showPassword ? "text" : "password"} placeholder="password" className="input input-bordered" required />
                 <button onClick={()=> setShowPassword(!showPassword)} 
-                    className="absolute right-4 top-[355px] left-80 text-2xl ">
+                    className="absolute right-4 top-[355px] left-72 md:left-80 text-2xl ">
                         {
                             showPassword ?  <IoMdEyeOff />  : <IoMdEye />
                         }
@@ -93,7 +93,7 @@ const Register = () => {
                 {error && <p className="text-red-500">{error} </p>}
             </form>
             
-            <p className="text-center mb-6 font-semibold">Already Have An Account ? <Link to="/login"> Login</Link></p>
+            <p className="text-center mb-6 font-semibold">Already Have An Account ? <Link to="/login"> <span className="text-orange-500">Login</span></Link></p>
             </div>
         </div>
         </div>

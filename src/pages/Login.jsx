@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { authContext } from "../provider/AuthProvider";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/google.png"
 
 
@@ -9,6 +9,12 @@ const Login = () => {
     const [error , setError] = useState("")
     const location = useLocation()
     const navigate = useNavigate()
+    const [email, setEmail] = useState("");
+ 
+
+    const handleForgotPassword = () => {
+        navigate("/forgot-password", { state: { email } });
+    };
 
     const handleSubmit =(e)=>{
         e.preventDefault();
@@ -50,7 +56,7 @@ const Login = () => {
                         <span className="label-text text-base">Password</span>
                     </label>
                     <input name="password" type="password" placeholder="password" autoComplete="off" className="input input-bordered" required />
-                    <p className="mt-4">Forget Password</p>
+                    <NavLink to="/forget-password"><p onClick={handleForgotPassword} className="mt-4 text-orange-500 text-right">Forget Password</p></NavLink>
                     </div>
                     <div className="form-control mt-4">
                          <button type="submit" className="btn bg-[#3b6781] text-white font-bold">Login</button>
@@ -62,7 +68,7 @@ const Login = () => {
                     </div>
                     {error && <p className="text-red-400">{error}</p>}
                 </form>
-                <p className="text-center mb-5 font-semibold">Dont’t Have An Account ? <Link to="/register"> Register</Link></p>
+                <p className="text-center mb-5 font-semibold">Dont’t Have An Account ? <Link to="/register"> <span className="text-orange-500">Register</span></Link></p>
                 </div>
             </div>
         </div>
