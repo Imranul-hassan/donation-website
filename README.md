@@ -1,7 +1,6 @@
 
 # Warm Hearts: Winter Clothing Donation Platform
 
-## Purpose
 This web application is designed to facilitate the donation of winter clothing to vulnerable communities, particularly during the colder months. It allows users to donate clothing, volunteer, or spread awareness of the cause to help those in need.
 
 ## Live URL
